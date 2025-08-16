@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import ExpenseTable from "../expense/ExpenseTable/ExpenseTable";
 import NewExpense from "../expense/NewExpense/NewExpense";
-import SignInPage from "../../pages/LoginPage";
 import styles from "./Main.module.scss";
 
 const Main = () => {
@@ -47,7 +46,6 @@ const Main = () => {
             </>
           }
         />
-        <Route path="/login" element={<SignInPage isDarkTheme={false} />} />
       </Routes>
     </main>
   );

@@ -1,24 +1,167 @@
 .main {
-	max-width: $breakpoint-xl;
-	margin: 0 auto;
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
 }
 
 .title {
-	font-size: 32px;
-	font-weight: 700;
-	margin-bottom: 32px;
-	margin-top: 16px;
-	color: $text-color;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  margin-top: 16px;
+  color: $text-color;
 }
 
 .content {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 34px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
 }
 
 @media (min-width: 768px) {
-	.content {
-		grid-template-columns: 1fr 1fr;
-	}
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
+//LOGIN PAGE:
+.auth__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  padding: 40px 16px;
+  box-sizing: border-box;
+}
+
+.auth__modal {
+  width: 100%;
+  max-width: 368px;
+  border: 0px solid #bbbbbb;
+  border-radius: 30px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 67px -12px rgba(0, 0, 0, 0.13);
+  background: #fff;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .auth__container {
+    padding: 0;
+  }
+  .auth__modal {
+    border: none;
+    padding: 32px 8px;
+  }
+}
+
+.auth__wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth__title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.auth__input_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.auth__input {
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 14px;
+  color: #141414;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.auth__input::placeholder {
+  color: #bbbbbb;
+}
+
+.auth__input_error {
+  border: 1.5px solid red;
+}
+
+@media (max-width: 480px) {
+  .auth__input {
+    max-width: 100%;
+  }
+}
+
+.auth__button {
+  width: 100%;
+  max-width: 272px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #7334ea;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.auth__button[disabled] {
+  background: #bbbbbb;
+  cursor: not-allowed;
+}
+
+.auth__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.auth__text {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  color: #bbb;
+}
+
+.auth__link {
+  font-size: 14px;
+  text-align: center;
+  color: #4181e6;
+  text-decoration: underline;
+}
+
+.auth__error-text {
+  color: red;
+  min-height: 18px;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+//LOGIN PAGE*
