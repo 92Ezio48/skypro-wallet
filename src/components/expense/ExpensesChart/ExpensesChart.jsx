@@ -249,7 +249,7 @@ export default function ExpensesChart({ date, range }) {
 
       {/* фиксируем высоту — чтобы ResponsiveContainer точно отрисовался */}
       <ResponsiveContainer width="100%" height={424}>
-        <BarChart data={computed} barSize={90}>
+        <BarChart data={computed} barCategoryGap="30%">
           <CartesianGrid vertical={false} stroke="#f0f0f0" />
           <XAxis
             dataKey="name"
@@ -258,7 +258,7 @@ export default function ExpensesChart({ date, range }) {
             tickLine={false}
           />
           <YAxis hide domain={[0, (dataMax) => dataMax * 1.1]} />
-          <Bar dataKey="value" radius={[8, 8, 0, 0]}>
+          <Bar dataKey="value" radius={[8, 8, 0, 0]} maxBarSize={200}>
             {computed.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={entry.color} />
             ))}
