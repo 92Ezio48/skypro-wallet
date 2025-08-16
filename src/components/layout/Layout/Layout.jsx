@@ -1,7 +1,5 @@
 import styles from './Layout.module.scss'
 
-function Layout({ children }) {
-	return <div className={`${styles.layout}`}>{children}</div>
+export const Layout = ({ children }) => {
+	return <main className={`${styles.layout}`}>{children}</main>
 }
-
-export default Layout

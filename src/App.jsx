@@ -1,13 +1,16 @@
-import './App.css'
 import './assets/styles/globals.scss'
-import Header from './components/layout/Header/Header'
-import Main from './components/Main/Main'
+import AuthProvider from './provider/AuthProvider'
+import { ExpenseProvider } from './provider/ExpenseProvider'
+import AppRoutes from './routes/AppRoutes'
 
-const App = () => {
+function App() {
 	return (
 		<div>
-			<Header />
-			<Main />
+			<AuthProvider>
+				<ExpenseProvider>
+					<AppRoutes />
+				</ExpenseProvider>
+			</AuthProvider>
 		</div>
 	)
 }
