@@ -1,12 +1,12 @@
 body {
-	background-color: $background-color;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	::selection {
-		background-color: $primary-color;
-		color: $background-color;
-	}
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  ::selection {
+    background-color: $primary-color;
+    color: $background-color;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
