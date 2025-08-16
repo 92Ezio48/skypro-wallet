@@ -19,7 +19,7 @@ const Spending = () => {
   });
 
   return (
-    <>
+    <div className="container">
       <h1 className={styles.title}>Анализ расходов</h1>
       <div className={styles.content}>
         <div className={styles.left}>
@@ -35,7 +35,7 @@ const Spending = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
